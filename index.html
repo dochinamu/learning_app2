@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning_app</title>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article class="question">
+        <!-- Header 구현 -->
+       <header class="question_header pt-2">
+            <button class="back_button">&#60;=</button>
+            <p class="head_text">Type와 Comparison</p>
+        </header>
+        <!-- progress bar 구현 -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <!-- quiz part 구현 -->
+        <div class="quiz">
+            <div class="mt-5 ml-4">
+                <p id=text1 class="quiz_text">아래 코드의 출력물은?</p>
+                <p id=text2 class="quiz_text">print(type(""))</p>
+            </div>
+        </div>
+
+        <!-- 파일명 part -->
+        <div class="file_name text-white pt-1 pb-1 pl-3">script.py</div>
+
+        
+
+
+        <!-- [객관식형] 틀 구현 -->
+        <div id="multiple" class="choice_num4 mt-4 ml-4 mr-4">
+            <div class="flex-column">
+            <button value=1 type="button" id="choice1" class="choice_btn btn btn-light text-left">선지1</button>
+            <button value=2 type="button" id="choice2" class="choice_btn btn btn-light text-left">선지2</button>
+            <button value=3 type="button" id="choice3" class="choice_btn btn btn-light text-left">선지3</button>
+            <button value=4 type="button" id="choice4" class="choice_btn btn btn-light text-left">선지4</button>
+            </div>
+        </div>
+
+        <!-- [타이핑형] 틀 구현 -->
+        <div id="typing">
+            <div class="code_background ml-2">
+            <div class="code mt-4">
+                <span id="pre_blank">print("apple"</span>
+                <input id="input_text" class="underline ml-2 mr-2 text-center" type="text">                
+                <span id="after_blank">"apple")</span>
+            </div>
+        </div>
+    </div>
+
+        <!--[블록입력형] 틀 구현 -->
+        <div id="block">
+            <div class="code_background pt-3"> 
+                <input id="input_text" readonly class="underline ml-2 text-center" type="text" placeholder="">
+                <input id="input_text" readonly class="underline ml-2 text-center" type="text" placeholder="">
+                <input id="input_text" readonly class="underline ml-2 text-center" type="text" placeholder="">
+            </div>
+            <div class="blocks mt-5 ml-2 mr-2">
+                <button class="block_btn block1" value="1">입력어 1</button>
+                <button class="block_btn block2" value="2">입력어 2</button>
+                <button class="block_btn block3" value="3">입력어 3</button>
+            </div>
+        </div>
+
+        <!-- 제출 part 구현 -->
+        <div id="submit" class="ml-4 mr-4">
+            <!-- 값 유무에 따른 활성화/비활성화 구분 필요 -->
+            <button type="button" disabled class="btn btn-primary submit_btn ">제출하기</button>
+        </div>
+
+        <!-- 정답 화면 구현 -->
+        <div id="correct" class="correct">
+            <p class="text-center">정답입니다!</p>
+            <div class="flex-row">
+            <button type="button" class="btn btn-primary correct_btn">다음으로</button>
+            </div>
+        </div>
+        
+        <!-- 오답 화면 구현 -->
+        <div id="not_correct" class="not_correct">
+            <p class="text-center">오답입니다</p>
+            <div class="flex-row">
+                <button type="button" class="btn btn-secondary skip_btn">skip</button>
+                <button type="button" class="btn btn-primary retry_btn">재도전</button>
+            </div>
+        </div>
+</article>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./index.js">
+    </script>
+</body>
+</html>
