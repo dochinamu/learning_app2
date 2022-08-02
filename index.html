@@ -11,11 +11,37 @@
 </head>
 
 <body>
+    <article class="explanation">
+        <!-- Header 구현 -->
+        <header class="question_header pt-2">
+            <button class="back_button">&#60;=</button>
+            <p class="head_text">변수 생성하기_value</p>
+        </header>
+            <!-- progress bar 구현 -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*0%)"></div>
+        </div>
+        <!-- explain part 구현 -->
+        <div class="explain">
+            <div class="mt-5 ml-4 mr-5">
+                <p id=text1 class="explain_text">변수(Variable)는 프로그램에서 사용할 데이터를 저장하는 데 사용되어요.</p>
+                <p id=text2 class="explain_text pt-3">변수가 포함하는 데이터에는 숫자, 문자열, 리스트와 같은 유형이 올 수 있어요.</p>
+                <p id=text3 class="explain_text pt-3">그리고 모든 변수에는 문자, 숫자 및 밑줄 문자 _로 구성할 수 있는 이름들이 있어요.</p>
+            </div>
+        </div>
+
+        <!-- 다음으로 part 구현 -->
+        <div id="next" class="">
+            <!-- 값 유무에 따른 활성화/비활성화 구분 필요 -->
+            <button type="button" class="btn btn-primary first_next_btn">다음으로</button>
+        </div>
+    </article>
+
     <article class="question">
         <!-- Header 구현 -->
        <header class="question_header pt-2">
             <button class="back_button">&#60;=</button>
-            <p class="head_text">Type와 Comparison</p>
+            <p class="head_text">변수 생성하기_value</p>
         </header>
         <!-- progress bar 구현 -->
         <div class="progress">
@@ -23,9 +49,9 @@
         </div>
         <!-- quiz part 구현 -->
         <div class="quiz">
-            <div class="mt-5 ml-4">
-                <p id=text1 class="quiz_text">아래 코드의 출력물은?</p>
-                <p id=text2 class="quiz_text">print(type(""))</p>
+            <div class="mt-5 ml-4 mr-4">
+                <p id=text1 class="quiz_text">변수의 이름에는 '숫자'가 포함될 수 있어요. 여러 개의 비슷한 변수들이 있을 때 변수에 숫자를 추가하면 보다 쉽게 구분할 수 있어요.</p>
+                <p id=text2 class="quiz_text">우선 변수 'city_1'을 만들어볼까요?</p>
             </div>
         </div>
 
@@ -36,21 +62,24 @@
 
 
         <!-- [객관식형] 틀 구현 -->
-        <div id="multiple" class="choice_num4 mt-4 ml-4 mr-4">
-            <div class="flex-column">
+        <div id="multiple" class="choice_num4">
+            <div class="code_background pt-4 pl-3">
+                <span id="default_code">기존코드</span>
+            </div>
+            <div class="flex-column ml-4 mr-4 mt-3">
             <button value=1 type="button" id="choice1" class="choice_btn btn btn-light text-left">선지1</button>
             <button value=2 type="button" id="choice2" class="choice_btn btn btn-light text-left">선지2</button>
-            <button value=3 type="button" id="choice3" class="choice_btn btn btn-light text-left">선지3</button>
-            <button value=4 type="button" id="choice4" class="choice_btn btn btn-light text-left">선지4</button>
+            <!-- <button value=3 type="button" id="choice3" class="choice_btn btn btn-light text-left">선지3</button>
+            <button value=4 type="button" id="choice4" class="choice_btn btn btn-light text-left">선지4</button> -->
             </div>
         </div>
 
         <!-- [타이핑형] 틀 구현 -->
         <div id="typing">
-            <div class="code_background pl-2">
-            <div class="code pt-4">
+            <div class="code_background pl-3">
+            <div class="code pt-3">
                 <span id="pre_blank">print("apple"</span>
-                <input id="input_text" class="underline ml-2 mr-2 text-center" type="text">                
+                <input id="input_text" size="2px" class="underline ml-2 mr-2 text-center" type="text">                
                 <span id="after_blank">"apple")</span>
             </div>
         </div>
@@ -58,22 +87,25 @@
 
         <!--[블록입력형] 틀 구현 -->
         <div id="block">
-            <div class="code_background pt-3"> 
-                <input id="input_text1" readonly class="underline ml-2 text-center" type="text" placeholder="">
-                <input id="input_text2" readonly class="underline ml-2 text-center" type="text" placeholder="">
-                <input id="input_text3" readonly class="underline ml-2 text-center" type="text" placeholder="">
+            <div class="code_background pt-3">
+                <div class="mt-2 ml-3 mb-2">
+                    <span class="bogi"></span>
+                </div>
+                <span class="bogi2 ml-4 mb-2"></span>
+                <input id="input_text1" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
+                <input id="input_text2" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
+                <input id="input_text3" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
             </div>
             <div class="blocks mt-5 ml-2 mr-2">
-                <button class="block_btn block1" value="1">입력어 1</button>
-                <button class="block_btn block2" value="2">입력어 2</button>
-                <button class="block_btn block3" value="3">입력어 3</button>
+                <button class="block_btn block1" value="1">1</button>
+                <button class="block_btn block2" value="2">_</button>
+                <button class="block_btn block3" value="3"> city</button>
             </div>
         </div>
 
         <!-- 제출 part 구현 -->
-        <div id="submit" class="ml-4 mr-4">
-            <!-- 값 유무에 따른 활성화/비활성화 구분 필요 -->
-            <button type="button" disabled class="btn btn-primary submit_btn ">제출하기</button>
+        <div id="submit" class="">
+            <button type="button" disabled class="btn btn-primary submit_btn">제출하기</button>
         </div>
 
         <!-- 정답 화면 구현 -->

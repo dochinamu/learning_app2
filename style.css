@@ -1,5 +1,5 @@
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
-html, body, .question {
+html, body, .question, .explanation {
     height: 100%;
   }
 
@@ -7,19 +7,33 @@ article {
     display: flex;
     flex-direction: column;
 }
+.explanation{
+    /* display: none; */
+}
+.explain {
+    background-color: black;
+    height: 45%;
+}
 
+.explain_text {
+    color: aliceblue;
+}
+
+.question{
+    display: none;
+}
 .question_header {
     display: flex;
     justify-content: center;
     align-content: center;
     position: relative;
-    background-color: #5e86f3;
+    background-color: #6E84DD;
 }
 
 .back_button {
     position: absolute;
     cursor: pointer;
-    background-color: #5e86f3;
+    background-color: #6E84DD;
     border-width: 0;
     left: 0;
     font-size: 20px;
@@ -46,11 +60,11 @@ article {
 
 #multiple {
     display: none;
-    margin-top: 25px;
+    height: 50vh;
 }
 
 .file_name {
-    background-color: rgb(30, 42, 206);
+    background-color: #292D79;
     
 }
 .btn:focus{
@@ -64,18 +78,19 @@ article {
     padding-bottom: 8px;
     margin-bottom: 15px;
 }
+
 #typing {
     height: 50vh;
-    /* display: none; */
-}
-
-#block {
     display: none;
 }
 
+#block {
+    /* display: none; */
+}
+
 .underline {
-    background-color: rgb(236, 232, 232);
-    width: 20%;
+    background-color: #F2F2F2;
+    /* width: 10%; */
     border-style:none;
     border-bottom:solid 1px black;
     border-collapse:collapse; 
@@ -91,12 +106,24 @@ article {
     width: 100%;
 }
 
+#next{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 25px;
+    width: 90%;
+    margin-left: 5%;
+}
+.first_next_btn {
+    width: 100%;
+}
+
 #correct, #not_correct {
     display: none;
     position: fixed;
     bottom: 0;
     margin-bottom: 25px;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .center {
@@ -106,18 +133,23 @@ article {
 }
 
 .submit_btn, .correct_btn {
-    width: 100%;
-    background-color: #5e86f3;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #6E84DD;
     border: 1.5px solid rgb(170, 170, 170);
     font-size: 17px;
 }
+.correct_btn {
+    width: 100%;
+    margin-left: 0;
+}
 
 #block {
-    height: 53%;
+    height: 50%;
 }
 
 .code_background {
-    background-color: rgb(236, 232, 232);
+    background-color: #F2F2F2;
     height: 30%
 }
 
@@ -131,7 +163,7 @@ article {
     color: white;
     border: 1.5px solid rgb(170, 170, 170);
     border-radius: 8px;
-    background-color: #5e86f3;
+    background-color: #6E84DD;
     font-size: 15px;
     padding-left: 20px;
     padding-right: 20px;
@@ -171,7 +203,7 @@ article {
     background-color: gray;
 }
 .retry_btn{
-    background-color: #5e86f3;
+    background-color: #6E84DD;
 }
 
 /* complete */
