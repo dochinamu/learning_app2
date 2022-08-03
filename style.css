@@ -115,6 +115,9 @@ article {
 }
 .first_next_btn {
     width: 100%;
+    background-color: #6E84DD;
+    border: 1.5px solid rgb(170, 170, 170);
+    font-size: 17px;
 }
 
 #correct, #not_correct {
@@ -150,7 +153,7 @@ article {
 
 .code_background {
     background-color: #F2F2F2;
-    height: 30%
+    height: 35%
 }
 
 .blocks {
@@ -204,6 +207,12 @@ article {
 }
 .retry_btn{
     background-color: #6E84DD;
+}
+.bogi {
+    line-height: 200%
+}
+.bogi3{
+    line-height: 200%;
 }
 
 /* complete */

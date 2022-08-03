@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>learning_app_curri1_step1</title>
+    <title>learning_app_curri1_step2</title>
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
         <!-- Header 구현 -->
         <header class="question_header pt-2">
             <button class="back_button">&#60;=</button>
-            <p class="head_text">변수 생성하기_value</p>
+            <p class="head_text">변수 사용하기_콘솔과 업데이트</p>
         </header>
             <!-- progress bar 구현 -->
         <div class="progress">
@@ -24,9 +24,9 @@
         <!-- explain part 구현 -->
         <div class="explain">
             <div class="mt-5 ml-4 mr-5">
-                <p class="explain_text">변수(Variable)는 프로그램에서 사용할 데이터를 저장하는 데 사용되어요.</p>
-                <p class="explain_text pt-3">변수가 포함하는 데이터에는 숫자, 문자열, 리스트와 같은 유형이 올 수 있어요.</p>
-                <p class="explain_text pt-3">그리고 모든 변수에는 문자, 숫자 및 밑줄 문자 _로 구성할 수 있는 이름들이 있어요.</p>
+                <p class="explain_text">컴퓨터는 여러 줄의 코드에 따라 작동해요.</p>
+                <p class="explain_text pt-3">코드를 실행(run)하는 건, 컴퓨터에게 지시를 따르라고 말하는 것과 같답니다.</p>
+                <p class="explain_text pt-3">컴퓨터는 코드를 한줄씩 읽기 때문에 코드를 작성하는 순서가 무척 중요해요.</p>
             </div>
         </div>
 
@@ -41,7 +41,7 @@
         <!-- Header 구현 -->
        <header class="question_header pt-2">
             <button class="back_button">&#60;=</button>
-            <p class="head_text">변수 생성하기_value</p>
+            <p class="head_text">변수 사용하기_콘솔과 업데이트</p>
         </header>
         <!-- progress bar 구현 -->
         <div class="progress">
@@ -49,9 +49,9 @@
         </div>
         <!-- quiz part 구현 -->
         <div class="quiz">
-            <div class="mt-5 ml-4 mr-4">
-                <p id=text1 class="quiz_text">변수의 이름에는 '숫자'가 포함될 수 있어요. 여러 개의 비슷한 변수들이 있을 때 변수에 숫자를 추가하면 보다 쉽게 구분할 수 있어요.</p>
-                <p id=text2 class="quiz_text">우선 변수 'city_1'을 만들어볼까요?</p>
+            <div class="mt-4 ml-4 mr-4">
+                <p id=text1 class="quiz_text">print()는 특별한 명령어예요. 괄호 안에 입력한 값을 콘솔(또는 shell)이라는 공간에 출력하게끔 하죠.</p>
+                <p id=text2 class="quiz_text">콘솔에 Hello, World!를 출력하여 반갑게 인사해볼까요?</p>
             </div>
         </div>
 
@@ -79,7 +79,10 @@
             <div class="code_background pl-3">
             <div class="code pt-3">
                 <span id="pre_blank">print("apple"</span>
-                <input id="input_text" size="2px" class="underline ml-2 mr-2 text-center" type="text">                
+                <input id="input_text" size="2px" class="underline text-center" type="text">
+                <div class = input_text_container>          
+                    <input id="input_text_b" size="2px" class="underline text-center" type="text">
+                </div>                      
                 <span id="after_blank">"apple")</span>
             </div>
         </div>
@@ -87,20 +90,21 @@
 
         <!--[블록입력형] 틀 구현 -->
         <div id="block">
-            <div class="code_background pt-3">
-                <div class="mt-2 ml-3 mb-2">
+            <div class="code_background pt-2">
+                <div class="ml-2">
                     <span class="bogi"></span>
                 </div>
-                <span class="bogi2 ml-4 mb-2"></span>
-                <input id="input_text1" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
-                <span class="bogi2 ml-4 mb-2"></span>
-                <input id="input_text2" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
-                <input id="input_text3" readonly size="2px" value="" class="underline ml-3 text-center" type="text" placeholder="">
+                <span class="bogi2 ml-2 mb-2"></span>
+                <input id="input_text1" readonly size="1px" value="" class="underline text-center" type="text" placeholder="">
+                <span class="bogi3 mb-2"></span>
+
+                <input id="input_text2" readonly size="1px" value="" class="underline text-center" type="text" placeholder="">
+                <input id="input_text3" readonly size="1px" value="" class="underline text-center" type="text" placeholder="">
             </div>
             <div class="blocks mt-5 ml-2 mr-2">
-                <button class="block_btn block1" value="1">1</button>
-                <button class="block_btn block2" value="2">_</button>
-                <button class="block_btn block3" value="3">city</button>
+                <button class="block_btn block1" value="1">"Hello, World"</button>
+                <button class="block_btn block2" value="2">print</button>
+                <button class="block_btn block3" value="3">버튼3</button>
             </div>
         </div>
 
@@ -129,7 +133,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="./index.js">
+    <script src="./curri1_step2.js">
     </script>
 </body>
 </html>
